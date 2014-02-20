@@ -17,7 +17,7 @@ module Railslove
                 where_sql = "to_char(\"#{field}\", 'MMDD') BETWEEN '#{date_start.strftime('%m%d')}' AND '#{date_end.strftime('%m%d')}'"
               end
             end
-            { :conditions => where_sql }
+            where_sql
           end
         end
       end

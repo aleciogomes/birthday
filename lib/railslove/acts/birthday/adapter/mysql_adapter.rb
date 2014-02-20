@@ -19,7 +19,7 @@ module Railslove
                 where_sql = "DATE_FORMAT(`#{field}`, '%m%d') >= \"#{date_start.strftime('%m%d')}\" AND DATE_FORMAT(`#{field}`, '%m%d') <= \"#{date_end.strftime('%m%d')}\""
               end
             end
-            { :conditions => where_sql }
+            where_sql
           end
         end
       end
